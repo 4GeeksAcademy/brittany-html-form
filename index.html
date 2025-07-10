@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Payment Form - Bootstrap Only</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <div class="container mt-5">
+    <div class="card">
+      <div class="card-header text-center">
+        <h4>Payment Form Example</h4>
+      </div>
+
+      <div class="card-body">
+        <div class="alert alert-danger mb-4" role="alert">
+          Some fields are missing.
+        </div>
+
+        <form novalidate>
+          <!-- Card #, CVC, Amount -->
+          <div class="row mb-3">
+            <div class="col-md-4">
+              <label for="card-number" class="form-label">CARD #</label>
+              <input type="number" class="form-control" id="card-number" placeholder="xxxxxxxxxxxxxxx" required />
+              <div class="invalid-feedback">Please enter a valid card number.</div>
+            </div>
+            <div class="col-md-4">
+              <label for="cvc-number" class="form-label">CVC #</label>
+              <input type="number" class="form-control" id="cvc-number" placeholder="xxx" required />
+              <div class="invalid-feedback">CVC is required.</div>
+            </div>
+            <div class="col-md-4">
+              <label for="amount" class="form-label">AMOUNT</label>
+              <input type="number" class="form-control" id="amount" placeholder="e.g., 100" required />
+              <div class="invalid-feedback">Amount is required.</div>
+            </div>
+          </div>
+
+          <!-- First Name, Last Name -->
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="first-name" class="form-label">FIRST NAME</label>
+              <input type="text" class="form-control" id="first-name" placeholder="Your first name" required />
+              <div class="invalid-feedback">First name is required.</div>
+            </div>
+            <div class="col-md-6">
+              <label for="last-name" class="form-label">LAST NAME</label>
+              <input type="text" class="form-control" id="last-name" placeholder="Your last name" required />
+              <div class="invalid-feedback">Last name is required.</div>
+            </div>
+          </div>
+
+          <!-- City, State, Postal Code -->
+          <div class="row mb-3">
+            <div class="col-md-4">
+              <label for="city" class="form-label">CITY</label>
+              <input type="text" class="form-control" id="city" placeholder="Enter your city" required />
+              <div class="invalid-feedback">City is required.</div>
+            </div>
+            <div class="col-md-4">
+              <label for="state" class="form-label">STATE</label>
+              <input type="text" class="form-control" id="state" placeholder="Enter your state" required />
+              <div class="invalid-feedback">State is required.</div>
+            </div>
+            <div class="col-md-4">
+              <label for="postal-code" class="form-label">POSTAL CODE</label>
+              <input type="text" class="form-control" id="postal-code" placeholder="Enter your postal code" required />
+              <div class="invalid-feedback">Postal code is required.</div>
+            </div>
+          </div>
+
+       <!-- We Accept and Message on Same Row -->
+<div class="row mb-4">
+  <!-- We Accept -->
+  <div class="col-md-8">
+    <label class="form-label">We accept:</label>
+    <div class="bg-secondary p-3 rounded d-flex gap-4 flex-wrap">
+      <div class="form-check form-check-inline text-white">
+        <input class="form-check-input" type="radio" name="cardType" id="visa" value="Visa" checked />
+        <label class="form-check-label text-white" for="visa">
+          <i class="fa-brands fa-cc-visa fa-xl me-1"></i> Visa
+        </label>
+      </div>
+      <div class="form-check form-check-inline text-white">
+        <input class="form-check-input" type="radio" name="cardType" id="mastercard" value="Mastercard" />
+        <label class="form-check-label text-white" for="mastercard">
+          <i class="fa-brands fa-cc-mastercard fa-xl me-1"></i> MasterCard
+        </label>
+      </div>
+      <div class="form-check form-check-inline text-white">
+        <input class="form-check-input" type="radio" name="cardType" id="amex" value="Amex" />
+        <label class="form-check-label text-white" for="amex">
+          <i class="fa-brands fa-cc-amex fa-xl me-1"></i> Amex
+        </label>
+      </div>
+      <div class="form-check form-check-inline text-white">
+        <input class="form-check-input" type="radio" name="cardType" id="discover" value="Discover" />
+        <label class="form-check-label text-white" for="discover">
+          <i class="fa-brands fa-cc-discover fa-xl me-1"></i> Discover
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Message Box -->
+  <div class="col-md-4">
+    <label for="message" class="form-label">Message</label>
+    <div class="input-group">
+      <textarea class="form-control" id="message" rows="5" placeholder="Leave a note or message..."></textarea>
+    </div>
+  </div>
+</div>
+
+      
+        
+      </div>
+
+      <!-- Footer -->
+     <div class="card-footer text-muted">
+  <div class="d-flex justify-content-end gap-2">
+    <button type="reset" class="btn btn-secondary">Cancel</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</div>
+</div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
